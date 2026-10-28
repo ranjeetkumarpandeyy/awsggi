@@ -26,11 +26,26 @@ window.SITE = {
     { name: "Tejaswi Kumar", role: "Event Management ", photo: "assets/people/tejaswi-kumar.jpg" },
     { name: "Varinder Yadav", role: "Registration & Management", photo: "assets/people/varinder-yadav.jpg" },
   ],
-  /* Photos for "Past moments". Put files in assets/gallery/ and list them here.
-     They are split between the two rows automatically. */
+  /* Photos for "Past moments". Keep each image path listed here.
+     HEIC files are excluded because browser support is inconsistent. */
   gallery: [
-    "assets/skyline.webp",
-    "assets/skyline-m.webp"
+    "assets/gallery/20260210_102936.jpg",
+    "assets/gallery/20260210_102954.jpg",
+    "assets/gallery/20260210_111314.jpg",
+    "assets/gallery/20260210_112915.jpg",
+    "assets/gallery/20260210_113027.jpg",
+    "assets/gallery/20260210_124425.jpg",
+    "assets/gallery/20260210_124427.jpg",
+    "assets/gallery/20260210_124527.jpg",
+    "assets/gallery/20260210_124535.jpg",
+    "assets/gallery/20260210_124537.jpg",
+    "assets/gallery/20260210_124837.jpg",
+    "assets/gallery/20260210_125125.jpg",
+    "assets/gallery/20260210_125753.jpg",
+    "assets/gallery/20260210_125754.jpg",
+    "assets/gallery/20260210_125757.jpg",
+    "assets/gallery/20260210_125759(0).jpg",
+    "assets/gallery/20260210_125759.jpg"
   ],
   empty: {
     speakers: "Speakers will be announced soon.",
