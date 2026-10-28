@@ -1,0 +1,7 @@
+{
+  "name": "aws-scd-ludhiana-2026",
+  "version": "2.0.0",
+  "private": true,
+  "description": "AWS Student Community Day Ludhiana 2026 website (static)",
+  "scripts": { "start": "npx --yes serve . -l 3000" }
+}
