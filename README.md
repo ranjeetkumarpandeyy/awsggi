@@ -1,6 +1,6 @@
 # AWS Student Community Day Ludhiana 2026
 
-Static website, no build step. Files: `index.html`, `assets/site.css`, `assets/site.js`, `assets/data.js`.
+Static website, no build step. Theme: purple, white and black. Header, hero, motion and mobile menu are in `assets/site.css` and `assets/site.js`. Files: `index.html`, `assets/site.css`, `assets/site.js`, `assets/data.js`.
 
 ## Add people and photos
 Open `assets/data.js`. Add one line per person to `speakers`, `faculty` or `team`:

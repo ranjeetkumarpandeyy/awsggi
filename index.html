@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AWS Student Community Day Ludhiana 2026 | Gulzar Group of Institutes, Khanna</title>
 <meta name="description" content="AWS Student Community Day Ludhiana 2026: a one-day student conference on cloud computing and AI at Gulzar Group of Institutes, Khanna, Punjab, on 22 November 2026.">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#05020a">
 <meta property="og:title" content="AWS Student Community Day Ludhiana 2026">
 <meta property="og:description" content="From Looms to Clouds. 22 November 2026, Gulzar Group of Institutes, Khanna, Punjab.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600&display=swap">
 <script>try{if(!sessionStorage.getItem("seen")&&!matchMedia("(prefers-reduced-motion:reduce)").matches)document.documentElement.className="pl"}catch(e){}</script>
 <link rel="stylesheet" href="assets/site.css">
 <script defer src="assets/data.js"></script>
@@ -16,26 +19,36 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
-<div class="loader" aria-hidden="true"><div><p>INITIALIZING CLOUD<span>...</span></p><i class="ln"><em></em></i></div></div>
+<div class="loader" aria-hidden="true"><div><p>AWS<b>SCD</b></p><i class="ln"><em></em></i></div></div>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
 <canvas id="bg" aria-hidden="true"></canvas>
 <div class="bar" id="bar"></div>
+
 <header class="site-header" id="top">
-  <div class="passbar"><div class="pb-in">
-    <span class="live"><i></i>Passes open 29 Oct, 10:00 AM</span>
-    <a href="https://konfhub.com/aws-scd-ludhiana-2026" target="_blank" rel="noopener noreferrer">Student Pass (Early Bird) <b>₹150</b></a>
-    <a href="https://konfhub.com/aws-scd-ludhiana-2026" target="_blank" rel="noopener noreferrer">GGI Student Pass <b>₹250</b></a>
-    <a href="https://konfhub.com/aws-scd-ludhiana-2026" target="_blank" rel="noopener noreferrer">Regular <b>₹350</b></a>
-    <a href="https://konfhub.com/aws-scd-ludhiana-2026" target="_blank" rel="noopener noreferrer">Professional / Faculty <b>₹500</b></a>
-  </div></div>
-  <div class="wrap head-row">
+  <div class="head-row">
     <a class="logo" href="#home" aria-label="AWS SCD Ludhiana, home">AWS<b>SCD</b></a>
     <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav"><i></i><i></i><span class="sr">Menu</span></button>
     <nav id="nav" class="nav" aria-label="Main"><ul>
-      <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#schedule">Schedule</a></li><li><a href="#speakers">Speakers</a></li><li><a href="#faculty">Faculty</a></li><li><a href="#team">Team</a></li><li><a href="#passes">Passes</a></li><li><a href="#media">Media</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#speakers">Speakers</a></li>
+      <li><a href="#team">Team</a></li>
+      <li class="dd">
+        <button type="button" class="dd-btn" aria-expanded="false" aria-haspopup="true">More<svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="dd-menu">
+          <li><a href="#faculty">Faculty</a></li>
+          <li><a href="#passes">Passes</a></li>
+          <li><a href="#media">Media</a></li>
+          <li><a href="#venue">Venue</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </li>
       <li><a class="cta" href="https://konfhub.com/aws-scd-ludhiana-2026" target="_blank" rel="noopener noreferrer">Get Tickets</a></li>
     </ul></nav>
   </div>
 </header>
+
 <main id="main">
   <section id="home" class="hero">
     <div class="wrap">
@@ -44,12 +57,23 @@
       <dl class="facts rv"><div><dt>Date</dt><dd>22 November 2026</dd></div><div><dt>Venue</dt><dd>GGI Campus, Khanna</dd></div><div><dt>Seats</dt><dd>250+ Participants</dd></div></dl>
       <div class="count rv" role="timer" aria-label="Time left until the event"><div><b id="cd-d">00</b><span>Days</span></div><i>:</i><div><b id="cd-h">00</b><span>Hrs</span></div><i>:</i><div><b id="cd-m">00</b><span>Min</span></div><i>:</i><div><b id="cd-s">00</b><span>Sec</span></div></div>
       <p class="actions rv"><a class="btn" href="https://konfhub.com/aws-scd-ludhiana-2026" target="_blank" rel="noopener noreferrer">Get your pass</a><a class="btn ghost" href="https://forms.gle/bFnjFs2gEM2TzY3F8" target="_blank" rel="noopener noreferrer">Apply to speak</a></p>
+      <div class="passbar rv"><span class="live"><i></i>Passes open 29 Oct, 10:00 AM</span>
+        <div class="pb-in">
+          <a href="https://konfhub.com/aws-scd-ludhiana-2026" target="_blank" rel="noopener noreferrer">Student Pass (Early Bird) <b>₹150</b></a>
+          <a href="https://konfhub.com/aws-scd-ludhiana-2026" target="_blank" rel="noopener noreferrer">GGI Student Pass <b>₹250</b></a>
+          <a href="https://konfhub.com/aws-scd-ludhiana-2026" target="_blank" rel="noopener noreferrer">Regular <b>₹350</b></a>
+          <a href="https://konfhub.com/aws-scd-ludhiana-2026" target="_blank" rel="noopener noreferrer">Professional / Faculty <b>₹500</b></a>
+        </div>
+      </div>
     </div>
+    <a class="scroll-cue" href="#about" aria-label="Scroll to About"><i></i></a>
   </section>
+
   <div class="ticker" aria-hidden="true"><div><span>Ideas worth building</span><span>AWS SCD Ludhiana 2026</span><span>250+ seats</span><span>22 November 2026</span><span>Ideas worth building</span><span>AWS SCD Ludhiana 2026</span><span>250+ seats</span><span>22 November 2026</span></div></div>
+
   <section class="wrap stats"><div class="rv"><b data-n="250" data-s="+">0</b><span>Participants</span></div><div class="rv"><b data-n="4" data-s="">0</b><span>Planned sessions</span></div><div class="rv"><b data-n="150" data-p="₹">0</b><span>Passes from</span></div><div class="rv"><b data-n="1" data-s=" day">0</b><span>Cloud and AI labs</span></div></section>
 
-    <section class="wrap notice rv"><h2>Notice</h2><ul>
+  <section class="wrap notice rv"><h2>Notice</h2><ul>
     <li>Pass bookings open on <strong>29 October 2026 at 10:00 AM IST</strong>.</li>
     <li>Registering before the event is compulsory. There is no walk-in entry.</li>
     <li>GGI students must carry their college ID card to the check-in desk.</li></ul></section>
@@ -129,6 +153,8 @@
     <p class="fine"><strong>Disclaimer:</strong> AWS Student Community Day Ludhiana 2026 is an independent student conference run by the AWS Student Builder Group at Gulzar Group of Institutes, Khanna. It is not hosted, sponsored or certified by Amazon Web Services, Inc. Amazon Web Services, AWS and the AWS logo are trademarks of Amazon.com, Inc. or its affiliates. © 2026 AWS Student Builder Group, GGI.</p>
   </div>
 </footer>
+
+<div class="mbar" id="mbar"><span>Passes from <b>₹150</b></span><a class="btn" href="https://konfhub.com/aws-scd-ludhiana-2026" target="_blank" rel="noopener noreferrer">Get tickets</a></div>
 <div class="cur" aria-hidden="true"></div>
 <a class="totop" href="#home" aria-label="Back to top">↑</a>
 </body>
