@@ -301,3 +301,7 @@ html,body{overflow-x:clip}.sched{overflow:hidden}
 .hero-reference .l2{display:none!important}
 .hero-reference .l1{font-size:clamp(3.2rem,8.2vw,6.5rem)}
 @media(max-width:767px){.hero-reference .l1{font-size:clamp(2.25rem,9.6vw,4rem)}}
+
+/* Use the shared AWS Student Builder Group chip mark in the header. */
+.sbg-mark{display:block;object-fit:contain;width:48px;height:48px;flex:none;border:0;background:transparent}
+@media(max-width:767px){.sbg-mark{width:36px;height:36px}}
