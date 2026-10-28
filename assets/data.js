@@ -12,7 +12,19 @@ window.SITE = {
     // { name: "Dr. Faculty Name", role: "Faculty Coordinator, GGI", photo: "assets/people/faculty1.jpg" },
   ],
   team: [
-    // { name: "Student Name", role: "Lead Organiser", photo: "assets/people/member1.jpg", link: "https://www.linkedin.com/in/..." },
+    { name: "Abhimanyu Kumar", role: "Core Team Member", photo: "assets/people/abhimanyu-kumar.jpg" },
+    { name: "Abid Ali", role: "Core Team Member", photo: "assets/people/abid-ali.jpg" },
+    { name: "Alisha Gupta", role: "Core Team Member", photo: "assets/people/alisha-gupta.jpg" },
+    { name: "Amjad Noor", role: "Core Team Member", photo: "assets/people/amjad-noor.jpg" },
+    { name: "Ayan Raj", role: "Core Team Member", photo: "assets/people/ayan-raj.jpg" },
+    { name: "Darpan Kumar", role: "Core Team Member", photo: "assets/people/darpan-kumar.jpg" },
+    { name: "Durga Shankar Gupta", role: "Core Team Member", photo: "assets/people/durga-shankar-gupta.jpg" },
+    { name: "Priyanshu Harsh", role: "Core Team Member", photo: "assets/people/priyanshu-harsh.jpg" },
+    { name: "Ranjeet Pandey", role: "Core Team Member", photo: "assets/people/ranjeet-pandey.jpg" },
+    { name: "Ravishankar", role: "Core Team Member", photo: "assets/people/ravishankar.jpg" },
+    { name: "Risha Maurya", role: "Core Team Member", photo: "assets/people/risha-maurya.jpg" },
+    { name: "Tejaswi Kumar", role: "Core Team Member", photo: "assets/people/tejaswi-kumar.jpg" },
+    { name: "Varinder Yadav", role: "Core Team Member", photo: "assets/people/varinder-yadav.jpg" },
   ],
   /* Photos for "Past moments". Put files in assets/gallery/ and list them here.
      They are split between the two rows automatically. */
