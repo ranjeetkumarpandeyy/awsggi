@@ -9,13 +9,44 @@
 
   /* menu (mobile overlay) and "More" dropdown (desktop) */
   var btn = q('#menu-btn'), nav = q('#nav'), dd = q('.dd'), ddBtn = q('.dd-btn');
-  function shut() { nav.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); d.body.style.overflow = ''; }
-  btn.addEventListener('click', function () { var o = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', o); d.body.style.overflow = o ? 'hidden' : ''; });
-  nav.addEventListener('click', function (e) { if (e.target.closest('a')) { shut(); dd.classList.remove('open'); } });
-  ddBtn.addEventListener('click', function (e) { e.stopPropagation(); var o = dd.classList.toggle('open'); ddBtn.setAttribute('aria-expanded', o); });
-  d.addEventListener('click', function (e) { if (!e.target.closest('.dd')) { dd.classList.remove('open'); ddBtn.setAttribute('aria-expanded', 'false'); } });
-  d.addEventListener('keydown', function (e) { if (e.key === 'Escape') { shut(); dd.classList.remove('open'); } });
-  addEventListener('resize', function () { if (innerWidth >= 768) shut(); });
+  function shut() {
+    if (nav) nav.classList.remove('open');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+    d.body.style.overflow = '';
+  }
+  if (btn && nav) {
+    btn.addEventListener('click', function () {
+      var o = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', o);
+      d.body.style.overflow = o ? 'hidden' : '';
+    });
+    nav.addEventListener('click', function (e) {
+      if (e.target.closest('a')) {
+        shut();
+        if (dd) dd.classList.remove('open');
+      }
+    });
+    d.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        shut();
+        if (dd) dd.classList.remove('open');
+      }
+    });
+    addEventListener('resize', function () { if (innerWidth >= 768) shut(); });
+  }
+  if (dd && ddBtn) {
+    ddBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var o = dd.classList.toggle('open');
+      ddBtn.setAttribute('aria-expanded', o);
+    });
+    d.addEventListener('click', function (e) {
+      if (!e.target.closest('.dd')) {
+        dd.classList.remove('open');
+        ddBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 
   /* people lists */
   qa('[data-list]').forEach(function (box) {
