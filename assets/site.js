@@ -71,14 +71,30 @@
 
   /* reveal on scroll, staggered inside grids */
   qa('.grid4,.people,.stats,.sched').forEach(function (p) { qa('.rv', p).forEach(function (e, i) { e.style.transitionDelay = (i % 4) * 90 + 'ms'; }); });
-  var io = new IntersectionObserver(function (es) {
-    es.forEach(function (e) {
-      if (!e.isIntersecting) return; var el = e.target; io.unobserve(el); el.classList.add('in');
-      var b = q('b[data-n]', el); if (b) count(b);
-      setTimeout(function () { el.style.transitionDelay = ''; }, 1400);
-    });
-  }, { threshold: .12, rootMargin: '0px 0px -4% 0px' });
-  qa('.rv').forEach(function (e) { if (!e.closest('.hero')) io.observe(e); });
+  /* Reveal content reliably on desktop and mobile. If IntersectionObserver is
+     unavailable or throws, keep content visible rather than leaving it hidden. */
+  var io = null;
+  function reveal(el) {
+    el.classList.add('in');
+    var b = q('b[data-n]', el); if (b) count(b);
+    setTimeout(function () { el.style.transitionDelay = ''; }, 1400);
+  }
+  if ('IntersectionObserver' in window) {
+    try {
+      io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          io.unobserve(e.target);
+          reveal(e.target);
+        });
+      }, { threshold: .08, rootMargin: '0px 0px 0px 0px' });
+    } catch (err) { io = null; }
+  }
+  qa('.rv').forEach(function (e) {
+    if (e.closest('.hero')) return;
+    if (io && !still) io.observe(e);
+    else reveal(e);
+  });
   function count(b) {
     var to = +b.dataset.n, pre = b.dataset.p || '', suf = b.dataset.s || '', s = performance.now();
     (function step(now) { var k = Math.min(1, (now - s) / 1600); b.textContent = pre + Math.round(to * (1 - Math.pow(1 - k, 3))) + suf; if (k < 1) requestAnimationFrame(step); })(s);
@@ -98,7 +114,14 @@
     last = y; up.classList.toggle('show', y > 700); mb.classList.toggle('show', y > innerHeight * .7);
     var cur = -1; secs.forEach(function (s, i) { if (s && s.getBoundingClientRect().top < innerHeight * .4) cur = i; });
     links.forEach(function (a, i) { a.classList.toggle('active', i === cur); });
-    if (!still && y < innerHeight) { hero.style.transform = 'translateY(' + y * 0.2 + 'px)'; hero.style.opacity = Math.max(0, 1 - y / (innerHeight * .85)); }
+    if (!still && fine && y < innerHeight) {
+      hero.style.transform = 'translateY(' + y * 0.2 + 'px)';
+      hero.style.opacity = Math.max(0, 1 - y / (innerHeight * .85));
+    } else if (y >= innerHeight) {
+      /* Never leave the hero permanently transparent after passing it. */
+      hero.style.opacity = '';
+      hero.style.transform = '';
+    }
   }
   addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(onScroll); } }, { passive: true }); onScroll();
 
